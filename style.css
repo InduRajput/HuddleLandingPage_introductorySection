@@ -1,0 +1,116 @@
+body {
+  background-image: url("images/bg-desktop.svg");
+  background-color: hsl(257, 40%, 49%);
+  padding: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.main {
+  display: grid;
+  grid-template-areas: '. myArea';
+}
+
+.imagemockup {
+  padding: 50px 50px 0 0;
+}
+
+.button {
+  background-color: hsl(0, 0%, 100%);
+  color: hsla(257, 40%, 49%, 0.7);
+  border-radius: 25px;
+  border: none;
+  padding: 15px 50px 15px 50px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: hsl(300, 69%, 71%);
+  cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.textsection {
+  grid-area: myArea;
+  padding: 50px;
+}
+
+.heading {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+}
+
+.icons {
+  text-align: right;
+}
+
+.icon_style {
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.icon_style:hover {
+  border: 2px solid hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width:675px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    margin: 20px;
+  }
+
+  .main {
+    display: grid;
+    padding: 30px 0 30px 0;
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .imagemockup {
+    padding: 0;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
+
+  .textsection {
+    grid-area: myArea;
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .icons {
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
